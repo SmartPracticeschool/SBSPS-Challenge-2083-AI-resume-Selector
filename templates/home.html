@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+<section class="hero is-primary is-bold is-large" style="height: 820px">
+  <div class="hero-body" style="padding-top: 20px ; background-color:#ffc107">
+    <div>
+      <h2></h2>
+      
+      
+    </div>
+    <div>
+     
+      <center>
+      <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+          Upload
+        </label>
+        <br>
+        <br>
+        <br>
+        <input type="file" name="file" id="imageUpload" accept=".csv">
+      </form>
+      </center>
+     
+      
+      <div class="image-section" style="display:none;">
+        <span></span>
+          <span></span>
+          <span></span>
+        <div>
+          <center>
+          
+          <button type="button" class="upload-label" id="btn-predict" style="color:black">Calculate Similarity</button>
+        </center>
+        </div>
+      </div>
+    </div>
+    <center>
+    <div class="loader" style="display:none;"></div>
+    <h1 style="color:black" id="result"> 
+    </h1>
+    </center>
+    <center>
+    <div style="padding-top: 10%">
+      <span style="color:black">Upload csv file, column name as below:</span>      
+    </div>
+    <img src="../static/img/example.jpg">
+  </center>
+  </div>
+
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="../static/js/scripts.js"></script>
+{% endblock %}
